@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="media/device_powered_on.jpg" width="400">
+</p>
 
 # Real-Time Speech Translator
 
