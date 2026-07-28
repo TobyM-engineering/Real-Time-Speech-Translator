@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/device_powered_on.jpg" width="700">
+  <img src="media/device_powered_on.jpg" width="400">
 </p>
 
 # Real-Time Speech Translator
@@ -30,7 +30,7 @@ It detects the spoken language automatically, switches between languages with no
 # 📸 System Photos
 
 ### **Board Stack**
-<img src="media/board_stack.jpg" width="600">
+<img src="media/board_stack.jpg" width="400">
 
 The full stack laid flat: the UPS battery HAT on the bottom, the Raspberry Pi Zero 2 W in the middle, and the USB hub HAT on top carrying the microphone and Bluetooth adapter. The button and status LED are wired to the Pi's GPIO header.
 
