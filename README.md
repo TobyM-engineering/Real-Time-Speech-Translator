@@ -30,7 +30,7 @@ It detects the spoken language automatically, switches between languages with no
 # 📸 System Photos
 
 ### **Board Stack**
-<img src="media/board_stack.jpg" width="600">
+<img src="media/board_stack.jpg" width="300">
 
 The full stack laid flat: the UPS battery HAT on the bottom, the Raspberry Pi Zero 2 W in the middle, and the USB hub HAT on top carrying the microphone and Bluetooth adapter. The button and status LED are wired to the Pi's GPIO header.
 
