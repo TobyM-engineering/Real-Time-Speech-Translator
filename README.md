@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/device_powered_on.jpg" width="400">
+  <img src="media/device_powered_on.jpg" width="700">
 </p>
 
 # Real-Time Speech Translator
@@ -30,7 +30,7 @@ It detects the spoken language automatically, switches between languages with no
 # 📸 System Photos
 
 ### **Board Stack**
-<img src="media/board_stack.jpg" width="300">
+<img src="media/board_stack.jpg" width="600">
 
 The full stack laid flat: the UPS battery HAT on the bottom, the Raspberry Pi Zero 2 W in the middle, and the USB hub HAT on top carrying the microphone and Bluetooth adapter. The button and status LED are wired to the Pi's GPIO header.
 
@@ -113,19 +113,32 @@ Each LED color leg needs a 330Ω resistor. Note that the UPS HAT uses GPIO2 and 
 
 ---
 
-# 💡 Status LED
+# 💡 Status LED and Button
 
-Because the device has no screen, the RGB LED reports what the system is doing:
+Because the device has no screen, the RGB LED reports what the system is doing.
+
+**While starting up:**
 
 | Color | Meaning |
 |-------|---------|
 | 🔵 Blinking Blue | Waiting for an internet connection |
-| 🟦 Blinking Cyan | Waiting for a Bluetooth controller |
-| ⚪ Solid White | Connecting to AirPods |
-| 🟢 Solid Green | Live and translating |
-| 🔴 Solid Red | Startup failed, restarting automatically |
+| 🟣 Blinking Magenta | Waiting for a Bluetooth controller |
+| ⚪ Solid White | Connecting to the earbuds |
+| 🔴 Solid Red | Startup failed, retrying automatically |
 
-Holding the button for 3 seconds triggers a clean restart of the whole system without needing a keyboard or screen.
+**While running:**
+
+| Color | Meaning |
+|-------|---------|
+| 🟢 Solid Green | Listening |
+| ⚪ Solid White | Capturing after a button press — say your word now |
+| 🔵 Solid Blue | Working on a translation |
+| 🔴 Two Red Blinks | Heard you, but nothing worth translating (or it was already English) |
+
+The button does two things:
+
+- **Short press** — push-to-translate. Captures whatever you say next and translates it directly, bypassing the automatic detection. This exists because ambient noise (a TV in the room) makes it hard for the system to spot the silence gap around a single word on its own.
+- **Hold 3 seconds** — cleanly restarts the whole system, useful if Bluetooth gets stuck.
 
 ---
 
@@ -161,10 +174,12 @@ source .venv/bin/activate
 pip install websocket-client python-dotenv gpiozero lgpio
 ```
 
-## 3. Add your API key
+## 3. Add your settings
 Create a `.env` file in the project folder:
 ```
 OPENAI_API_KEY=your_key_here
+AIRPODS_MAC=XX:XX:XX:XX:XX:XX
+AIRPODS_NAME=AirPods Pro
 ```
 > ⚠️ Never commit this file. It is already listed in `.gitignore`.
 
@@ -184,7 +199,7 @@ trust XX:XX:XX:XX:XX:XX
 pair XX:XX:XX:XX:XX:XX
 connect XX:XX:XX:XX:XX:XX
 ```
-Then update `AIRPODS_MAC` in `software/translator.py` with your device's address.
+Then put your device's address into `AIRPODS_MAC` in your `.env` file. Find it with `bluetoothctl devices` if you don't have it.
 
 ## 6. Run it
 ```bash
@@ -212,7 +227,7 @@ After this, the device boots directly into translating mode when powered on.
 
 ✅ Boots headless with LED status and button control
 
-⚙️ Single-word translation fallback (works inconsistently)
+✅ Push-to-translate button for single words
 
 🔧 Bluetooth stability improvements in progress
 
