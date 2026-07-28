@@ -158,10 +158,6 @@ If your LED is common anode instead of common cathode, wire the common leg to 3.
 
 Test the wiring before going further:
 
-```bash
-python3 tools/button_led_test.py
-```
-
 Pressing the button should cycle the LED through its colors.
 
 ---
