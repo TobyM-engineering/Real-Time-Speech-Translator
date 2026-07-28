@@ -29,11 +29,6 @@ It detects the spoken language automatically, switches between languages with no
 
 # 📸 System Photos
 
-### **Assembled Device**
-<img src="media/device_powered_on.jpg" width="600">
-
-The complete translator, powered on and connected to an AirPod, in a translating state. Everything needed to run is on the board — there is no phone or computer involved.
-
 ### **Board Stack**
 <img src="media/board_stack.jpg" width="600">
 
