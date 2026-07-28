@@ -1,1 +1,14 @@
+[Unit]
+Description=Real-time speech translator
+After=network-online.target bluetooth.target pipewire.service wireplumber.service
+Wants=network-online.target pipewire.service wireplumber.service
 
+[Service]
+Type=simple
+WorkingDirectory=%h/translator
+ExecStart=%h/translator/.venv/bin/python3 %h/translator/translator.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
