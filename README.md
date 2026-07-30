@@ -22,7 +22,7 @@ It detects the spoken language automatically, switches between languages with no
 ---
 
 # 🎥 Demo
-
+(none yet)
 - **[Demo Video](media/demo.mp4)** – The translator running live: foreign speech in, English out through the AirPod, switching between multiple languages with no configuration.
 
 ---
