@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/device_powered_on.jpg" width="700">
+  <img src="media/device_powered_on.jpg" width="400">
 </p>
 
 # Real-Time Speech Translator
@@ -79,7 +79,7 @@ Hardware diagrams are stored in the **[`hardware/`](hardware/)** folder.
 [View system_architecture.png](hardware/system_architecture.png)
 
 <p align="center">
-  <img src="hardware/system_architecture.png" width="800">
+  <img src="hardware/system_architecture.png" width="400">
 </p>
 
 The flow from speech to translated audio:
