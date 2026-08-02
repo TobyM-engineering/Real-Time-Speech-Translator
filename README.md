@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/device_powered_on.jpg" width="400">
+  <img src="media/device_powered_on.jpg" width="700">
 </p>
 
 # Real-Time Speech Translator
@@ -22,15 +22,15 @@ It detects the spoken language automatically, switches between languages with no
 ---
 
 # 🎥 Demo
-(none yet)
-- **[Demo Video](media/demo.mp4)** – The translator running live: foreign speech in, English out through the AirPod, switching between multiple languages with no configuration.
+
+**[Watch the demo](media/translator-demo.mp4)** – The translator running live: French speech in, English out through the AirPod, only a couple of seconds behind the speaker.
 
 ---
 
 # 📸 System Photos
 
 ### **Board Stack**
-<img src="media/board_stack.jpg" width="400">
+<img src="media/board_stack.jpg" width="600">
 
 The full stack laid flat: the UPS battery HAT on the bottom, the Raspberry Pi Zero 2 W in the middle, and the USB hub HAT on top carrying the microphone and Bluetooth adapter. The button and status LED are wired to the Pi's GPIO header.
 
@@ -253,7 +253,7 @@ Real-Time-Speech-Translator/
 ├── media/
 │   ├── device_powered_on.jpg
 │   ├── board_stack.jpg
-│   └── demo.mp4
+│   └── translator-demo.mp4
 │
 ├── .gitignore
 ├── LICENSE
