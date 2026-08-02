@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/device_powered_on.jpg" width="400">
+  <img src="media/device_powered_on.jpg" width="300">
 </p>
 
 # Real-Time Speech Translator
@@ -30,7 +30,7 @@ It detects the spoken language automatically, switches between languages with no
 # 📸 System Photos
 
 ### **Board Stack**
-<img src="media/board_stack.jpg" width="600">
+<img src="media/board_stack.jpg" width="280">
 
 The full stack laid flat: the UPS battery HAT on the bottom, the Raspberry Pi Zero 2 W in the middle, and the USB hub HAT on top carrying the microphone and Bluetooth adapter. The button and status LED are wired to the Pi's GPIO header.
 
@@ -79,7 +79,7 @@ Hardware diagrams are stored in the **[`hardware/`](hardware/)** folder.
 [View system_architecture.png](hardware/system_architecture.png)
 
 <p align="center">
-  <img src="hardware/system_architecture.png" width="400">
+  <img src="hardware/system_architecture.png" width="550">
 </p>
 
 The flow from speech to translated audio:
@@ -95,7 +95,7 @@ The flow from speech to translated audio:
 [View wiring_diagram.png](hardware/wiring_diagram.png)
 
 <p align="center">
-  <img src="hardware/wiring_diagram.png" width="800">
+  <img src="hardware/wiring_diagram.png" width="550">
 </p>
 
 The button and RGB LED connect directly to the Pi's GPIO header. All other components connect over USB through the hub HAT.
